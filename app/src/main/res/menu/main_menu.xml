@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme='@style/ThemeOverlay.AppCompat.Dark.ActionBar'
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/likebutton"
+    android:title="like"
+    app:showAsAction="always"
+    android:icon="@drawable/ic_thumb"></item>
+
+    <item
+        android:id="@+id/commentbutton"
+        android:title="comment"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_comment_black_24dp"></item>
+    <item
+        android:id="@+id/bookmarbutton"
+        android:title="like"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_bookmark_black_24dp"></item>
+<item
+    android:id="@+id/sharebutton"
+    android:title="share"
+    app:showAsAction="always"
+    android:icon="@drawable/ic_share_black_24dp"
+></item>
+
+
+
+</menu>

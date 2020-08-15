@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/ezy" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/our_services"
+            android:text="Our Services"
+            android:textColor="@color/colorBlack"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="ADMISSIONS"
+                    android:textSize="27dp"
+                    android:fontFamily="@font/lato"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorRed"
+                    />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="35dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/our_services"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="6dp"
+            android:text="Big decision! Bigger research! \nSchool options in your area, \nselection criteria, fees, \ncurriculum, reviews, infra. Find it all here! Fill one form and apply to multiple schools of your choice"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#1E1D1D"
+            android:textSize="21dp"
+            android:textStyle="normal"
+            android:layout_marginBottom="10dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/cardviewparenting"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="PARENTING"
+            android:id="@+id/parenting_button"
+            android:textSize="27dp"
+            android:fontFamily="@font/lato"
+            android:textAlignment="center"
+            android:textColor="@color/colorRed"
+            />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/admissions"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="6dp"
+            android:textAlignment="viewStart"
+            android:text="Strap on your seatbelts parents – Monthly milestones, sleep patterns, vaccinations, home remedies, decoding poop, feeding, feeding, burping, massaging. We’ve got you covered."
+            android:textColor="#070707"
+            android:textSize="21dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato"
+            android:text="NEWS"
+            android:textAlignment="center"
+            android:textColor="@color/colorRed"
+            android:textSize="27dp"
+            />
+
+
+    <ImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/news"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="6dp"
+            android:textAlignment="viewStart"
+            android:text="The world of news is cluttered and there is a lot out there that is relevant to your child’s growth and future. Stay tuned to stay relevant!"
+            android:textColor="#121111"
+            android:textSize="21dp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_initiatives"
+            android:text="Online Initiatives"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/campposter" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/live_sessions"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:text="Live Sessions"
+            android:textSize="30dp"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/live_sessionsview"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/our_quizzes"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:text="Our Quizzes"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quiz_view"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:id="@+id/in_the_news"
+            android:text="In The News"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/in_news__view"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/our_journey"
+            android:text="Our Journey"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/our_journey"
+            android:background="@color/colorWhite"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+
+
+android:layout_marginTop="20dp"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@color/colorFormBackground"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:id="@+id/ezy"
+                android:text="Ezyschooling"
+                android:textAlignment="center"
+                android:textSize="26dp"
+                android:textColor="@color/colorBlack"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="130dp"
+                android:text="Copyright © 2020"
+                android:textSize="12dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="30dp"
+                android:text="POLICY"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="22dp"
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="8dp"
+                android:text="Privacy"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms of Use"
+                android:layout_marginLeft="126dp"
+                android:layout_marginTop="6dp"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTACT US"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="@color/colorBlack"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91-8766340464"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="120dp"></TextView>
+           <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="query@ezyschooling.com"
+            android:textSize="16dp"
+            android:textAlignment="center"
+               android:layout_marginTop="8dp"
+            android:layout_marginLeft="110dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCHOOLS"
+                android:layout_marginLeft="126dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="@color/colorBlack"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="142dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hire Teachers"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="126dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PARENTS"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="@color/colorBlack"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="135dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search for Schools"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parenting"
+                android:textSize="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="142dp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+ <!--<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#D32F2F"
+android:paddingTop="32dp">
+
+<TextView
+    android:id="@+id/admissions_button"
+    style="@style/ProductsButton"
+    android:text="@string/admissions"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/parenting_button"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/parenting_button"
+    style="@style/ProductsButton"
+    android:text="@string/parenting"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/news_button"
+    style="@style/ProductsButton"
+    android:text="@string/news"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/parenting_button"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/admissions_button"
+    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+<ImageView
+    android:id="@+id/imageView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/parenting_button"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+<ImageView
+    android:id="@+id/imageView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/news_button"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/imageView2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@android:drawable/ic_menu_mapmode" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>-->
+

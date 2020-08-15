@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/lato"
+                        android:paddingTop="18dp"
+                        android:text="Ezyschooling"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorRed"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Contact Us"
+                    android:textSize="38sp" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name*"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:hint="Enter your name"
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_text_border"
+                    />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email*"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="15sp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:hint="Enter your email address"
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_text_border"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="15sp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:hint="Enter your mobile number"
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_text_border"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message* "
+                    android:paddingTop="20dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="15sp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:hint="Enter your message"
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_text_border"
+                    />
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Message"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorRed"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_border"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="You may reach us at:"
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:paddingLeft="8dp"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="@color/colorBlack"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        />
+                    <TextView
+                        android:id="@+id/tvReachUsEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email: query@ezyschooling.com"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/tvReachUsPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone: +91 8766340463"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="8dp"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/tvReachUsAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address: A-67 Hardevpuri, 100 Foota Road, Shahdara, New Delhi 110093, India"
+                        android:textSize="15sp"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

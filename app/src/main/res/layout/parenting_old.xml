@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/lato"
+                android:paddingTop="18dp"
+                android:text="Ezyschooling"
+                android:textAlignment="center"
+                android:textColor="@color/colorRed"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Age Criteria:" />
+
+                <HorizontalScrollView
+                    android:id="@+id/svAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/age0to2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/first_icons" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="0-2" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age2to4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/second_icons" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="2-4" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age4to6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/four_six_icons" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="4-6" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age6to8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/six_eight_icons" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="6-8" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age8to10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/eight_ten_icons" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="8-10" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age10to12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ten_twelve_icon" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="10-12" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age12to14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/twelve_fourteen_icon" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="12-14" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age14to16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/fourteen_sixteen_icon" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="14-16" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/age16to18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/sixteen_eighteen_icon" />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="16-18" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="swipe>>>"
+                    android:gravity="end"
+                    android:paddingRight="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Filter:" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/LLBody"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/body"
+                                />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Body" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:id="@+id/LLMind"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/mind"
+                                />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Mind" />
+                        </LinearLayout>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:id="@+id/LLSociety"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/society"
+                                />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Society" />
+                        </LinearLayout>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:id="@+id/LLEducation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/edu"
+                                />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Education" />
+                        </LinearLayout>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:id="@+id/LLFamily"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/family"
+                                />
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Family" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="swipe>>>"
+                    android:gravity="end"
+                    android:paddingRight="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Top Reads:"
+                    android:paddingLeft="5dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopReadItem"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+    <!--<layout xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <!--    -->
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/colorWhite">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:paddingTop="16dp">-->
+
+    <!--&lt;!&ndash;            for the age filter&ndash;&gt;-->
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/age_filter"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="90dp"-->
+    <!--                android:layout_marginTop="32dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="parent" >-->
+    <!--                -->
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/age_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:orientation="vertical">-->
+    <!--                        <ImageView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+
+    <!--                            />-->
+    <!--                        <TextView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="0-2"-->
+    <!--                            />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            for the category filter&ndash;&gt;-->
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/category_filter"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="80dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/age_filter">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/category_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            Top reads&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/top_reads"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Top Reads"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/category_filter" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/see_top_reads"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginStart="296dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="See More"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/category_filter" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_top_reads"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="160dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/category_filter" >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/top_reads_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            Latest reads&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/latest_reads"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Latest Reads"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_top_reads" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/see_latest_reads"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginStart="296dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="See More"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_top_reads" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_latest_reads"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="160dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/view_top_reads" >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/latest_reads_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/top_videos"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Top Videos"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_latest_reads" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/see_top_videos"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginStart="296dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="See More"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_latest_reads" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_top_videos"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="160dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/view_latest_reads" >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/top_videos_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            Latest videos&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/latest_videos"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Latest Videos"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_top_videos" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/see_latest_videos"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginStart="296dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="See More"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_top_videos" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_latest_videos"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="160dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/view_top_videos" >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/latest_videos_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            Discussion top&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/top_discussions"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Top Discussions"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_latest_videos" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/see_top_discussions"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginStart="296dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="See More"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_latest_videos" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_top_discussions"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="120dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/view_latest_videos" >-->
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/top_discussions_gallery"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:orientation="horizontal"/>-->
+    <!--            </HorizontalScrollView>-->
+
+    <!--&lt;!&ndash;            Our experts&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/our_experts"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                android:layout_marginTop="60dp"-->
+    <!--                android:fontFamily="@font/product_sans_bold"-->
+    <!--                android:text="Our Experts"-->
+    <!--                android:textColor="@color/colorBlack"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/view_top_discussions" />-->
+
+    <!--            <HorizontalScrollView-->
+    <!--                android:id="@+id/view_our_experts"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="160dp"-->
+    <!--                android:scrollbars="horizontal"-->
+    <!--                android:layout_marginTop="120dp"-->
+    <!--                android:layout_marginRight="24dp"-->
+    <!--                android:layout_marginLeft="24dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/view_top_discussions">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/our_experts_gallery"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal"/>-->
+
+    <!--            </HorizontalScrollView>-->
+
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <!--    </ScrollView>-->
+    <!--</layout>-->
+    <!--    -->

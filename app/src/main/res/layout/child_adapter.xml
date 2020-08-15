@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_child"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_login"
+        />
+
+    <TextView
+        android:id="@+id/txt_childname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Name"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_childage"
+        app:layout_constraintEnd_toEndOf="@+id/txt_childage"
+        app:layout_constraintStart_toStartOf="@+id/txt_childage"
+        app:layout_constraintTop_toTopOf="@+id/image_child" />
+
+    <TextView
+        android:id="@+id/txt_childage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        app:layout_constraintBottom_toTopOf="@+id/txt_childgender"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/image_child"
+        app:layout_constraintTop_toBottomOf="@+id/txt_childname" />
+
+    <TextView
+        android:id="@+id/txt_childgender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        app:layout_constraintBottom_toBottomOf="@+id/image_child"
+        app:layout_constraintEnd_toEndOf="@+id/txt_childage"
+        app:layout_constraintStart_toStartOf="@+id/txt_childage" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_pencil_foreground"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_edit"
+            android:background="@drawable/ic_delete_foreground"
+            android:layout_margin="10dp"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Ezyschooling</string>
+    <string name="app_home">Ezyschooling_Home</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="action_school">As School</string>
+    <string name="action_parent">As Parent</string>
+    <string name="action_admissions1">Admissions Home</string>
+    <string name="action_admissions2">Admissions Information</string>
+    <string name="action_admissions3">Explore Schools</string>
+    <string name="action_admissions4">Admission Form</string>
+    <string name="action_parenting1">Parenting Home</string>
+    <string name="action_parenting2">Expert Articles</string>
+    <string name="action_parenting3">Parenting Forum</string>
+    <string name="action_parenting4">Videos</string>
+    <string name="action_parenting5">Ask a Question</string>
+    <string name="action_see_more1">Advertise With Us</string>
+    <string name="action_see_more2">Contact Us</string>
+    <string name="action_see_more3">About Us</string>
+    <string name="register">SIGN UP</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+    <!--about us string-->
+    <string name="admission_text">With a platform like Ezyschooling parents can enroll for school admission at any hour of the day, also a parent needs to fill only one common admission form for any number of schools in DELHI/NCR. There are 150+ schools and 15000+ parents that have already joined Ezyschooling.</string>
+    <string name="parenting_text">Ezyschooling believes that the toughest journey of a human life is parenting and thus supports them in their parenting journey through experts from various fields such as psychology, nutrition, education, nurturing and career. There are various article on tips, detailed advice and growth milestones of a child at different age groups right from a new born to 18 years. Ezyschooling has a YouTube channel where expert’s videos (parenting insights, Dadi nani ke gharelu nuskhe, nutrition And School admission) are uploaded covering different aspects of parenting.</string>
+    <string name="aboutTheCompany_text">EzySchooling is a unique tech-enabled Multi-Utility platform for Parents and Schools aiming at facilitating them with relevant information about admissions, news, events along with all aspects of parenting. Ezyschooling is a platform that has various fields that parents and schools can share."</string>
+    <string name="news_text">Ezyschooling shares daily news feed from state, country and world that are relevant for a parent and have a separate column for interviews. A motivation column (ACHIEVERS OF THE MONTH) for children excelling in different field is a special feature.</string>
+    <string name="parenting">Parenting</string>
+    <string name="news">News</string>
+    <string name="admissions">Admissions</string>
+    <string name="company_name">Ezyschooling</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--class array for children-->
+    <string-array name="classes">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>Pre Nursery</item>
+        <item>Nursery</item>
+        <item>KG</item>
+
+    </string-array>
+</resources>

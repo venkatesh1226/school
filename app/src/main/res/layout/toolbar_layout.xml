@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+            <Button
+                android:id="@+id/admissions"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_admission"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:text="Admissions"/>
+
+            <Button
+                android:id="@+id/parenting"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_admission"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="Parenting"
+                android:layout_marginTop="160dp"/>
+
+            <Button
+                android:id="@+id/news"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_admission"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="News"
+                android:layout_marginTop="220dp"/>
+
+            <Button
+                android:id="@+id/see_more"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_see_more"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="See More"
+                android:layout_marginTop="280dp"/>
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_signup"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="Signup"
+                android:layout_marginTop="340dp"/>
+            <Button
+                android:id="@+id/login"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/colorLoginBg"
+                android:drawableStart="@drawable/ic_login"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="Login"
+                android:layout_marginTop="400dp"/>
+            <!--
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/nav_login"
+                            android:entries="@array/login_list" />
+                            -->
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

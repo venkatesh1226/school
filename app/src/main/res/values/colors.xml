@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FAFAFA</color>
+    <color name="colorPrimaryDark">#C7C7C7</color>
+    <color name="colorAccent">#41B6EC</color>
+
+    <color name="colorLightGrey">#D3D3D3</color>
+    <color name="colorDarkGrey">#A9A9A9</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorOffWhite">#f9f9f9</color>
+    <color name="colorBgGrey">#F9F9F9</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLoginBg">#e3e3e3</color>
+
+    <color name="colorBgBoardSelected">#A0DCF2</color>
+    <color name="colorChartFill">#A0DCF2</color>
+
+    <color name="colorWelcomeOneTopBg">#DBF3FA</color>
+    <color name="colorWelcomeTwoTopBg">#EED8B1</color>
+    <color name="colorWelcomeThreeTopBg">#C8E6C9</color>
+    <color name="lightGreen">#04F849</color>
+
+
+    <color name="colorPrimaryBackground">#0886c7</color>
+
+    <color name="colorFormBackground">#e4e4e4</color>
+
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+    
+    <!-- colors for splash screen background -->
+    <color name="endColor">#FF0000</color>
+    <color name = "startColor">#C64724</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+</resources>

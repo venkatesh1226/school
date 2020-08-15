@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_layout"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/button_border"
+    android:padding="20dp"
+    >
+    <ImageView
+        android:id="@+id/imgclose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:srcCompat="@drawable/ic_close"
+        android:layout_alignParentEnd="true"
+        />
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/asschl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="As School"
+        android:textSize="19dp"
+        android:layout_below="@id/text_view"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
+    <TextView
+        android:id="@+id/asparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="As Parent"
+        android:textSize="19dp"
+        android:layout_below="@id/asschl"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
+</RelativeLayout>

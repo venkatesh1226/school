@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ezy"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="serif"
+        android:text="Schooling Made Easy"
+        android:textColor="@color/colorRed"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="https://www.ezyschooling.com/"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
+
+</LinearLayout>
+
+
+

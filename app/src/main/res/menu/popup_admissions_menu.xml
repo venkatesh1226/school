@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+        android:id="@+id/action_admissions1"
+        android:title="@string/action_admissions1"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_admissions2"
+        android:title="@string/action_admissions2"
+        android:icon="@drawable/ic_information"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_admissions3"
+        android:title="@string/action_admissions3"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_admissions4"
+        android:title="@string/action_admissions4"
+        android:icon="@drawable/ic_form"
+        app:showAsAction="never"/>
+</menu>

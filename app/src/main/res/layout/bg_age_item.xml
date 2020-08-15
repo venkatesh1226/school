@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp">
+    
+    <ImageView
+        android:shape="oval"
+        android:id="@+id/age_category"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/bg_age_filter" />
+    
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:text="Age"
+        android:gravity="center"
+        android:textSize="8dp" />
+
+</LinearLayout>

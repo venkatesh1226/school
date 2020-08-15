@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/like_button"
+        android:enabled="true"
+        android:title="Like"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/comment_button"
+        android:enabled="true"
+        android:icon="@drawable/ic_comment_black_24dp"
+        android:title="Comment"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bookmar_button"
+        android:enabled="true"
+        android:icon="@drawable/ic_bookmark_black_24dp"
+        android:title="Bookmark"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/share_button"
+        android:enabled="true"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Share"
+        app:showAsAction="always" />
+</menu>

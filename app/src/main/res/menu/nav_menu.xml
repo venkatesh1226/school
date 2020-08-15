@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <group>
+
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_login"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_signup"
+            android:icon="@drawable/ic_signup"
+            android:title="Sign up"/>
+        <item
+            android:id="@+id/nav_admission"
+            android:icon="@drawable/ic_admission"
+            android:title="Admissions"/>
+        <item
+            android:id="@+id/nav_parenting"
+            android:icon="@drawable/ic_admission"
+            android:title="Parenting"/>
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_admission"
+            android:title="News"/>
+        <item
+            android:id="@+id/nav_see_more"
+            android:icon="@drawable/ic_see_more"
+            android:title="See More"/>
+
+
+    </group>
+
+</menu>

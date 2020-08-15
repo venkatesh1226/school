@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:id="@+id/article_back"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                    android:background="@color/colorPrimary"
+                    ></ImageButton>
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="18dp"
+                    android:text="@string/company_name"
+                    android:layout_marginLeft="60dp"                    android:textColor="@color/colorRed"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discussions"
+                android:textSize="28dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 to 2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_0-2_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" ></androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 to 4"
+                android:textColor="@color/colorRed"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"></TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_2-4_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" ></androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 to 6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed"></TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_4-6_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" ></androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 to 8"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_6-8_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 to 10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_8-10_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 to 12"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_10-12_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 to 14"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_12-14_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 to 16"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_14-16_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16 to 18"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorRed" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_16-18_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

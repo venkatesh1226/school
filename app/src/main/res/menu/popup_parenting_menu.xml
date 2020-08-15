@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_parenting1"
+        android:title="@string/action_parenting1"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_parenting2"
+        android:title="@string/action_parenting2"
+        android:icon="@drawable/icon_magazine"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_parenting3"
+        android:title="@string/action_parenting3"
+        android:icon="@drawable/ic_parenting"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_parenting4"
+        android:title="@string/action_parenting4"
+        android:icon="@drawable/ic_video_camera"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_parenting5"
+        android:title="@string/action_parenting5"
+        android:icon="@drawable/icon_question_mark"
+        app:showAsAction="never"/>
+</menu>

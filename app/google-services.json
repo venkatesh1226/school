@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602859425566",
+    "firebase_url": "https://ezyschooling-3e50f.firebaseio.com",
+    "project_id": "ezyschooling-3e50f",
+    "storage_bucket": "ezyschooling-3e50f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602859425566:android:dd79e17f1cedaee485c30f",
+        "android_client_info": {
+          "package_name": "com.ezyschooling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602859425566-52hu23ask1eemd4f6qfrnmrd9ue2uat9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU89yxhOXu1itrbKmTvDkTeJuqWpgULG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602859425566-52hu23ask1eemd4f6qfrnmrd9ue2uat9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

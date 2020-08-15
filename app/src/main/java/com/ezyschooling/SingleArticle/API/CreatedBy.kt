@@ -1,0 +1,19 @@
+package com.ezyschooling.SingleArticle.API
+
+
+import com.google.gson.annotations.SerializedName
+
+data class CreatedBy(
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("is_expert_panel")
+    val isExpertPanel: Boolean,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("profile_picture")
+    val profilePicture: String,
+    @SerializedName("slug")
+    val slug: String,
+    @SerializedName("user")
+    val user: Int
+)
