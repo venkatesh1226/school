@@ -19,7 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".viewProfile"></activity>
+        <activity android:name=".usertags.AllTagsActivity"></activity>
+        <activity android:name=".profile.EditProfile" />
+        <activity android:name=".profile.viewProfile" />
         <activity android:name=".parenting.top_content.CommentReplyCreateActivity" />
         <activity android:name=".parenting.top_content.comment_reply_display_activity" />
         <activity android:name=".parenting.top_content.DiscussionsSeeMoreActivity" />

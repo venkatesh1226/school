@@ -9,16 +9,31 @@
        android:id="@+id/details"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-        android:text="Account Details"
-       android:textSize="50dp"
-       android:layout_margin="5dp"
-       android:fontFamily="@font/lato"
-       />
+       android:layout_marginStart="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginBottom="10dp"
+       android:fontFamily="@font/average"
+       android:text="Account Details"
+       android:textSize="30dp" />
+
+   <TextView
+       android:id="@+id/child_no"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/details"
+       android:layout_marginStart="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginBottom="10dp"
+       android:fontFamily="@font/average"
+       android:text="Father of 0 child"
+       android:textSize="20dp" />
    <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/child_list"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-      android:layout_below="@+id/details"
+      android:layout_below="@+id/child_no"
        android:layout_margin="10dp"
        android:padding="5dp"/>
 

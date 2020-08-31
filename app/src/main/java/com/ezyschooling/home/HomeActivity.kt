@@ -1,6 +1,8 @@
 package com.ezyschooling.home
 
+import android.Manifest.permission.CAMERA
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
@@ -12,6 +14,7 @@ import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
@@ -37,11 +40,13 @@ import com.ezyschooling.home.Adapter.InTheNewsAdapter
 import com.ezyschooling.home.Adapter.LiveSessionAdapter
 import com.ezyschooling.home.Adapter.OurQuizAdapter
 import com.ezyschooling.parenting.ParentingHomeActivity
+import com.ezyschooling.profile.EditProfile
 import com.ezyschooling.signup.SignUpActivity
-import com.ezyschooling.viewProfile
+import com.ezyschooling.profile.viewProfile
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.content_main.*
 import java.lang.reflect.Method
+
 
 
 class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -150,6 +155,8 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         super.onBackPressed()
     }
     override fun initView() {
+
+
         dashboardBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -377,6 +384,10 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     }
 
                     R.id.edit_profile ->{
+                        val intent = Intent(this, EditProfile::class.java)
+
+                        startActivity(intent)
+
                     Toast.makeText(this@HomeActivity, "You Clicked : " + item.title, Toast.LENGTH_SHORT).show()
                      }
 

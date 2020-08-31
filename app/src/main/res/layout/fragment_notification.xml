@@ -7,10 +7,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your\nNotifications"
-        android:textSize="50dp"
+        android:text="Your Notifications"
+        android:textSize="30dp"
+
         android:layout_margin="5dp"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/average"
         />
 
 </RelativeLayout>

@@ -15,6 +15,7 @@ import com.ezyschooling.SharedprefManager
 import com.ezyschooling.api.Api
 import com.ezyschooling.api.RetrofitClient
 import com.ezyschooling.signup.SignUpActivity
+import com.ezyschooling.utils.Parents
 import kotlinx.android.synthetic.main.activity_login.*
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -34,6 +35,7 @@ class LoginAcitivity : AppCompatActivity() {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     val BASE_URL = "https://api.parenting.ezyschooling.com/"
+//   val  BASE_URL="https://api.dev.ezyschooling.com/"
 
 
     val instance1: Api by lazy {
@@ -106,14 +108,18 @@ class LoginAcitivity : AppCompatActivity() {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     val loginResponse = response.body()
                     if (response.code() == 200) {
+
                         sharedPreferencesLogin.edit().putString("token", loginResponse?.key.toString()).apply()
 
                         //using a common class for saving,clearing,login,logout,getting token
                         SharedprefManager.getInstance(this@LoginAcitivity)?.saveToken(loginResponse?.key.toString())
                         //ends
                         AUTH = "Token " +sharedPreferencesLogin.getString("token"," ").toString()
+
+
                         Toast.makeText(applicationContext,"login successful", Toast.LENGTH_SHORT).show()
                         fetchprofile()
+                        fetchParent()
                         finish()
                         /*
                          intent = Intent(applicationContext, HomeActivity::class.java)
@@ -130,6 +136,28 @@ class LoginAcitivity : AppCompatActivity() {
         }
     }
 
+    fun fetchParent(){
+        instance1.getParent().enqueue(object:Callback<Parents>{
+            override fun onFailure(call: Call<Parents>, t: Throwable) {
+            Toast.makeText(this@LoginAcitivity,"Connection Lost",Toast.LENGTH_SHORT).show()
+                Log.e("ERROR",t.localizedMessage)
+            }
+
+            override fun onResponse(call: Call<Parents>, response: Response<Parents>) {
+                if (response.isSuccessful){
+                    response.body()?.let {
+                        SharedprefManager.getInstance(this@LoginAcitivity)?.saveParents(
+                            it
+                        )
+                    }
+                Toast.makeText(this@LoginAcitivity,response.body().toString(),Toast.LENGTH_SHORT).show()
+                }
+                else
+                    Toast.makeText(this@LoginAcitivity,"Authentication failed",Toast.LENGTH_SHORT).show()
+
+            }
+        })
+    }
     fun fetchprofile() {
         instance1.userprofile()
             .enqueue(object : Callback<ProfileResponse> {
@@ -140,7 +168,7 @@ class LoginAcitivity : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call<ProfileResponse>, response: Response<ProfileResponse>) {
-                    Toast.makeText(applicationContext, "Welcome "+response.body()?.name, Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, "Welcome "+response.body(), Toast.LENGTH_LONG).show()
                     Log.i("response", response.body().toString() + " " + response.code())
                 }
             })

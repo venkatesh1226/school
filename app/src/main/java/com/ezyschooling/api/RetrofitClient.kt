@@ -2,19 +2,20 @@ package com.ezyschooling.api
 
 
 import android.content.Context
-import android.content.SharedPreferences
-import com.ezyschooling.LogIn.models.LoginAcitivity
 import com.ezyschooling.SharedprefManager
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.IOException
 
 object RetrofitClient {
 
-    private const val BASE_URL = "https://api.parenting.ezyschooling.com/"
+      var BASE_URL = "https://api.parenting.ezyschooling.com/"
+//   var  BASE_URL="https://api.dev.ezyschooling.com/"
+
     lateinit var context :Context
 
     fun getContext(c:Context){
@@ -37,6 +38,7 @@ object RetrofitClient {
       //  val AUTH:String =SharedprefManager.getInstance(context)?.token().toString()
         val okHttpClient =
             OkHttpClient.Builder().addInterceptor(object : Interceptor {
+
                 @Throws(IOException::class)
                 override fun intercept(chain: Interceptor.Chain): Response {
                     val original = chain.request()
@@ -47,6 +49,8 @@ object RetrofitClient {
                     return chain.proceed(request)
                 }
             }
+
+
             ).build()
 
         val retrofit = Retrofit.Builder().baseUrl(BASE_URL)

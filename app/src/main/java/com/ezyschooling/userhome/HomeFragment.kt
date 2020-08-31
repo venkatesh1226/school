@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,7 @@ import com.ezyschooling.R
 import com.ezyschooling.SharedprefManager
 import com.ezyschooling.api.RetrofitClient.instance
 import com.ezyschooling.api.RetrofitClient.instance1
+import com.ezyschooling.utils.Parents
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -49,11 +51,13 @@ class HomeFragment : Fragment() {
 
 //creating UI*********************
 lateinit var childList:RecyclerView
+lateinit var noOfChild:TextView
 
 var ctx:FragmentActivity? =null
+    lateinit var parents:Parents
 
 
-    override fun onCreateView(
+    override  fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -61,17 +65,16 @@ var ctx:FragmentActivity? =null
 
 
         ctx=activity
-        if(null==ctx)
-        Log.d("Error",ctx.toString())
+
         var view:View= inflater.inflate(R.layout.fragment_home, container, false)
         childList=view.findViewById(R.id.child_list)
+        noOfChild=view.findViewById(R.id.child_no)
         var context: Context? =activity?.applicationContext
-        var id:String?=null
-        if (context != null) id= SharedprefManager.getInstance(
-            context
-        )?.id()
+        parents= context?.let { SharedprefManager.getInstance(it)?.getParents() }!!
+
+        val id:Int?= context?.let { SharedprefManager.getInstance(it)?.getParents()?.user }
         if (id != null&&context!=null) {
-            instance1.userChilds(id).enqueue(
+            instance1.userChilds("$id").enqueue(
                 object : Callback<ChildResponse> {
                     override fun onFailure(call: Call<ChildResponse>, t: Throwable) {
 
@@ -84,11 +87,11 @@ var ctx:FragmentActivity? =null
 
                        if(response.isSuccessful){
                         val array:Array<Child>?=response.body()?.results
-                           childList(array,context)
-                      
-                        val no:Integer?=response.body()?.count
 
-                        Toast.makeText(context, no.toString(),Toast.LENGTH_SHORT).show(); }
+
+                           childList(array,context)
+
+                           }
                         else
                            Toast.makeText(context,"Something Went Wrong",Toast.LENGTH_SHORT).show()
 
@@ -106,11 +109,21 @@ var ctx:FragmentActivity? =null
     fun childList(array: Array<Child>?,c:Context){
         val childAdapter:ChildAdapter= ChildAdapter(ctx)
 
+        if(parents.gender=="Male")
+            noOfChild.setText("Father of ${array?.size} children")
+        else{
+
+            noOfChild.setText("Mother of ${array?.size} children")}
+
         if (array != null) {
+
             childAdapter.list=array.toMutableList()
+            childAdapter.notifyDataSetChanged()
         }
+
        // childAdapter.context=c
         childList.adapter=childAdapter
+
         childList.layoutManager=LinearLayoutManager(context)
     }
 

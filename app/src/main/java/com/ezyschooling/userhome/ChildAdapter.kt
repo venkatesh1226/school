@@ -16,6 +16,8 @@ import com.ezyschooling.api.RetrofitClient.instance1
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
+
 
 class ChildAdapter(ctx:FragmentActivity?): RecyclerView.Adapter<ChildAdapter.ViewHolder>() {
     lateinit var list: MutableList<Child>
@@ -34,10 +36,32 @@ class ChildAdapter(ctx:FragmentActivity?): RecyclerView.Adapter<ChildAdapter.Vie
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+       //Toast.makeText(context,list.get(position).photo,Toast.LENGTH_SHORT).show()
         holder.txtName.text=list.get(position).name
-        holder.txtAge.text=list.get(position).date_of_birth
-        holder.txtGender.text=list.get(position).gender
-      if(null!=list.get(position).photo)
+        val cal:Calendar= Calendar.getInstance()
+        val dob=(list.get(position).date_of_birth).split("-")
+     //   Toast.makeText(context,cal.year+""+dob.get(0),Toast.LENGTH_SHORT).show()
+        val year=Integer.valueOf(dob.get(0))
+        val month=Integer.valueOf(dob.get(1))
+        val day=Integer.valueOf(dob.get(2))
+
+        if(cal.get(Calendar.YEAR)-(year as Int)>0){
+           holder.txtAge.setText(""+(cal.get(Calendar.YEAR)-(year as Int))+" years old")
+        }
+        else{
+            if(cal.get(Calendar.MONTH)-(month as Int)>0){
+                holder.txtAge.setText(""+(cal.get(Calendar.MONTH)-(month as Int))+" months old")
+            }
+            else
+                holder.txtAge.text="--"
+        }
+
+        if(list.get(position).gender=="male")
+        holder.txtGender.text="Son"
+        else
+            holder.txtGender.text="Daughter"
+
+  //    if(null!=list.get(position).photo)
         Glide.with(context).asBitmap().load(list.get(position).photo).into(holder.image)
 
 //       Deleting Child After DialogBox
