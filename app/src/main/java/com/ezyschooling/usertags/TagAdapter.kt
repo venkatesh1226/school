@@ -88,6 +88,7 @@ class TagAdapter(ctx: FragmentActivity?) : RecyclerView.Adapter<TagAdapter.ViewH
 
 //                }
 
+
             }
         })
     }
