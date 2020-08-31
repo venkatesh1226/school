@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <TextView
+        android:id="@+id/txt_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Details"
+        android:fontFamily="@font/average"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:layout_below="@+id/txt_heading"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/average"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name"
+        android:layout_marginTop="10dp"
+        android:hint="Name"/>
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:fontFamily="@font/average"
+        android:layout_below="@+id/edt_name"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_email"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:clickable="false"/>
+    <TextView
+        android:id="@+id/txt_relation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relation with Kids:"
+        android:fontFamily="@font/average"
+        android:layout_below="@+id/edt_email"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edt_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_relation"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:clickable="false"
+       />
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_rel"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:text="Update Details"
+        android:fontFamily="@font/average"
+        android:padding="5dp"
+        android:background="@color/lightGreen"/>
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_rel"
+        android:layout_toLeftOf="@+id/btn_update"
+        android:layout_margin="10dp"
+        android:background="@color/colorDarkGrey"
+        android:fontFamily="@font/average"
+
+        android:text="Close"/>
+
+
+
+
+</RelativeLayout>
