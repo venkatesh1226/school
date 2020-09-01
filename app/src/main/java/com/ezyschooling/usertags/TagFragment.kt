@@ -83,7 +83,7 @@ class TagFragment : Fragment() {
         })
     }
     fun createList(array:MutableList<Tag>){
-        var adapter :TagAdapter= TagAdapter(ctx)
+        var adapter :TagAdapter= TagAdapter(ctx,"Unfollow")
         adapter.list=array
         list.adapter=adapter
         list.layoutManager=LinearLayoutManager(contexts)

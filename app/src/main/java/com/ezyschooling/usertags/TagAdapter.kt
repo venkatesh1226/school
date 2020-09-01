@@ -18,10 +18,11 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.lang.Exception
 
-class TagAdapter(ctx: FragmentActivity?) : RecyclerView.Adapter<TagAdapter.ViewHolder>(){
+class TagAdapter(ctx: FragmentActivity?,status :String ) : RecyclerView.Adapter<TagAdapter.ViewHolder>(){
     lateinit var list: MutableList<Tag>
     var cTx=ctx
     lateinit var context: Context
+    var status:String=status
 
 
     class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
@@ -41,12 +42,16 @@ class TagAdapter(ctx: FragmentActivity?) : RecyclerView.Adapter<TagAdapter.ViewH
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tagName.text=list.get(position).name
-        status(position,holder)
+
+        if(status=="Unfollow"){
+            holder.follow.text="Unfollow"
+            cTx?.resources?.getColor(R.color.colorRed)?.let { holder.follow.setTextColor(it) }
+
+        }
         holder.followNo.text=""+(list.get(position).parent_following_count)+" People Following"
         holder.follow.setOnClickListener(object:View.OnClickListener{
             override fun onClick(v: View?) {try {
-                Log.e("ERROR","Clicked follow"+context)
-                Toast.makeText(context, "Clicked Follow", Toast.LENGTH_SHORT).show()
+
                 api(position,holder)
             }
             catch (e:Exception){
@@ -65,33 +70,7 @@ class TagAdapter(ctx: FragmentActivity?) : RecyclerView.Adapter<TagAdapter.ViewH
 
     }
 
-    fun status(pos:Int,h:ViewHolder){
-        instance1.tagStatus(list.get(pos).slug).enqueue(object : Callback<TagStatus> {
-            override fun onFailure(call: Call<TagStatus>, t: Throwable) {
-                Log.e("ERROR",t.message)
-            }
 
-            override fun onResponse(call: Call<TagStatus>, response: Response<TagStatus>) {
-                if (response.isSuccessful){
-//                    Log.e("ERROR",""+response.body()?.tag_status+response.message()+response.raw())
-                    if (response.body()?.tag_status==true){
-                        h.follow.text="Unfollow"
-                        cTx?.resources?.getColor(R.color.colorRed)?.let { h.follow.setTextColor(it) }
-                        notifyDataSetChanged()
-                    }
-                }
-//                else{
-//                    h.follow.text="Follow"
-//                    cTx?.resources?.getColor(R.color.colorAccent)?.let { h.follow.setTextColor(it) }
-//                    notifyDataSetChanged()
-//                    Log.e("ERROR",""+response.body()+response.message()+response.code())
-
-//                }
-
-
-            }
-        })
-    }
     fun api(pos:Int,h:ViewHolder){
         instance1.followTag(list.get(pos).slug).enqueue(object : Callback<TagStatus> {
             override fun onFailure(call: Call<TagStatus>, t: Throwable) {
@@ -101,13 +80,16 @@ class TagAdapter(ctx: FragmentActivity?) : RecyclerView.Adapter<TagAdapter.ViewH
 
             override fun onResponse(call: Call<TagStatus>, response: Response<TagStatus>) {
                 if (response.isSuccessful){
-                    Toast.makeText(context, response.body()?.tag_status.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, status+"ing "+list.get(pos).name, Toast.LENGTH_SHORT).show()
                     list.removeAt(pos)
                         notifyDataSetChanged()
                 }
                 else {
-                    Toast.makeText(context, response.code(), Toast.LENGTH_SHORT).show()
-                    Log.e("ERROR",response.errorBody().toString()+response.code())
+//                    Toast.makeText(context, response.code().toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("ERROR",""+response.errorBody().toString()+response.code().toString())
+
+
+
                 }
             }
         })

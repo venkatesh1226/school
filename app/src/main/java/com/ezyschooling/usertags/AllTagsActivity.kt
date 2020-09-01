@@ -37,7 +37,7 @@ class AllTagsActivity : AppCompatActivity() {
   }
 
     fun populate(array:MutableList<Tag>){
-        var adapter :TagAdapter= TagAdapter(this)
+        var adapter :TagAdapter= TagAdapter(this,"Follow")
         adapter.list=array
         list.adapter=adapter
         list.layoutManager= LinearLayoutManager(this)
